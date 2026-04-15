@@ -5,7 +5,6 @@
     ./hardware-configuration.nix
   ];
 
-  # bootloader
   boot.loader.systemd-boot.enable = false;
   boot.loader.grub.enable = true;
   boot.loader.grub.device = "nodev";
@@ -42,13 +41,22 @@
     LC_TIME = "en_US.UTF-8";
   };
 
-  # disable x
   services.xserver.enable = false;
 
-  # use kde plasma
+  # kde plasma
   services.displayManager.sddm.enable = true;
   services.desktopManager.plasma6.enable = true;
 
+  services.xserver.videoDrivers = [ "nvidia" ];
+
+  hardware.nvidia = {
+    modesetting.enable = true;
+    open = false;
+    nvidiaSettings = true;
+    package = config.boot.kernelPackages.nvidiaPackages.production;
+  };
+
+  # keymap
   services.xserver.xkb = {
     layout = "us";
     variant = "";
@@ -85,18 +93,22 @@
   users.users.emmie.shell = pkgs.fish;
   programs.nix-ld.enable = true;
   programs.neovim.enable = true;
+  programs.git = {
+    enable = true;
+    config = {
+      user.name = "Emmie";
+      user.email = "98668340+emolucy@users.noreply.github.com";
+    };
+  };
 
   nixpkgs.config.allowUnfree = true;
 
-  # enable flakes
   nix.settings.experimental-features = [
     "nix-command"
     "flakes"
   ];
 
-  # system packages
   environment.systemPackages = with pkgs; [
-    git
     wget
     curl
     unzip
@@ -107,17 +119,19 @@
     nodejs
     neofetch
     gcc
-    jdk
+    jdk21
     python3
     spotify
     cargo
     rustc
+    gradle
   ];
 
   fonts.packages = [
     pkgs.maple-mono.NL-NF
   ];
 
+  # dont change
   system.stateVersion = "25.11";
 
 }
