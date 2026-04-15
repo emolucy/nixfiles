@@ -12,6 +12,6 @@
     userEmail = "98668340+emolucy@users.noreply.github.com";
     extraConfig = {
       init.defaultBranch = "main";
-    }
+    };
   };
 }
