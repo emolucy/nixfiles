@@ -93,13 +93,6 @@
   users.users.emmie.shell = pkgs.fish;
   programs.nix-ld.enable = true;
   programs.neovim.enable = true;
-  programs.git = {
-    enable = true;
-    config = {
-      user.name = "Emmie";
-      user.email = "98668340+emolucy@users.noreply.github.com";
-    };
-  };
 
   nixpkgs.config.allowUnfree = true;
 
