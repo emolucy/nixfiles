@@ -1,5 +1,3 @@
-{ pkgs, ... }:
-
 {
   description = "nixfiles by emmie paw.";
 
