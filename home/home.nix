@@ -8,9 +8,9 @@
 
   programs.git = {
     enable = true;
-    userName = "Emmie";
-    userEmail = "98668340+emolucy@users.noreply.github.com";
-    extraConfig = {
+    settings = {
+      user.name = "Emmie";
+      user.email = "98668340+emolucy@users.noreply.github.com";
       init.defaultBranch = "main";
     };
   };
