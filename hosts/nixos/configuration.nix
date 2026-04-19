@@ -73,6 +73,8 @@
     pulse.enable = true;
   };
 
+  security.sudo.wheelNeedsPassword = false;
+
   users.users.emmie = {
     isNormalUser = true;
     description = "emmie";
