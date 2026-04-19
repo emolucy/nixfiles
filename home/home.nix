@@ -16,6 +16,6 @@
   };
 
   home.packages = with pkgs; [
-    maven
+    (maven.override { jdk_headless = jdk25; })
   ];
 }
