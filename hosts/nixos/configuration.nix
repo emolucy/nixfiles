@@ -112,7 +112,7 @@
     nodejs
     neofetch
     gcc
-    jdk21
+    jdk25
     python3
     spotify
     cargo
