@@ -119,6 +119,9 @@
     rustc
     gradle
     tree
+    xorg.libXxf86vm
+    xorg.libX11
+    xorg.libXtst
   ];
 
   fonts.packages = [
