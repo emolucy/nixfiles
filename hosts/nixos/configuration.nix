@@ -95,7 +95,7 @@
   programs.neovim.enable = true;
   programs.java = {
     enable = true;
-    package = pkgs.jdk25.override { enableJavaFX = true; };
+    package = pkgs.jdk23.override { enableJavaFX = true; };
   };
 
   nixpkgs.config.allowUnfree = true;
