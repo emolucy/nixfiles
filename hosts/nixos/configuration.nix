@@ -118,6 +118,7 @@
     cargo
     rustc
     gradle
+    tree
   ];
 
   fonts.packages = [

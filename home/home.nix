@@ -14,4 +14,8 @@
       init.defaultBranch = "main";
     };
   };
+
+  home.packages = with pkgs; [
+    maven
+  ];
 }
