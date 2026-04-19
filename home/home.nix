@@ -16,6 +16,6 @@
   };
 
   home.packages = with pkgs; [
-    (maven.override { jdk_headless = jdk25.override; { enableJavaFX = true; }; })
+    (maven.override { jdk_headless = jdk25.override { enableJavaFX = true; }; })
   ];
 }
