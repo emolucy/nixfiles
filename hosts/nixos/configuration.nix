@@ -93,6 +93,10 @@
   users.users.emmie.shell = pkgs.fish;
   programs.nix-ld.enable = true;
   programs.neovim.enable = true;
+  programs.java = {
+    enable = true;
+    package = pkgs.jdk25.override { enableJavaFX = true; };
+  };
 
   nixpkgs.config.allowUnfree = true;
 
@@ -112,16 +116,12 @@
     nodejs
     neofetch
     gcc
-    jdk25
     python3
     spotify
     cargo
     rustc
     gradle
     tree
-    xorg.libXxf86vm
-    xorg.libX11
-    xorg.libXtst
   ];
 
   fonts.packages = [
