@@ -124,6 +124,8 @@
     rustc
     gradle
     tree
+    woeusb-ng
+    ventoy
   ];
 
   fonts.packages = [
