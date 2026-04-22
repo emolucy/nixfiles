@@ -55,17 +55,6 @@
     subpixelRendering = "rgb";
   };
 
-  gtk = {
-    enable = true;
-    gtk3.extraConfig = {
-      gtk-hint-font-metrics = 1;
-      gtk-xft-hinting = 1;
-      gtk-xft-hintstyle = "hintslight";
-      gtk-xft-rgba = "rgb";
-      gtk-xft-antialias = 1;
-    };
-  };
-
   home.packages = with pkgs; [
     fastfetch
     inter
