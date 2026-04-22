@@ -18,6 +18,7 @@
     videos = "${config.home.homeDirectory}/store/video";
     templates = "${config.home.homeDirectory}/store/misc/template";
     publicShare = "${config.home.homeDirectory}/dl/public";
+    projects = null;
    };
 
   programs.git = {
