@@ -48,12 +48,7 @@
     };
   };
   
-  fonts.fontconfig = {
-    enable = true;
-    antialiasing = true;
-    hinting = "slight";
-    subpixelRendering = "rgb";
-  };
+  fonts.fontconfig.enable = true;
 
   home.packages = with pkgs; [
     fastfetch
