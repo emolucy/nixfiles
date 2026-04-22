@@ -7,6 +7,19 @@
 
   programs.home-manager.enable = true;
 
+  xdg.userDirs = {
+    enable = true;
+    createDirectories = true;
+    desktop = "${config.home.homeDirectory}/store/misc/desktop";
+    download = "${config.home.homeDirectory}/dl/net";
+    documents = "${config.home.homeDirectory}/store/doc/xdg";
+    music = "${config.home.homeDirectory}/store/audio";
+    pictures = "${config.home.homeDirectory}/store/image";
+    videos = "${config.home.homeDirectory}/store/video";
+    templates = "${config.home.homeDirectory}/store/misc/template";
+    publicShare = "${config.home.homeDirectory}/dl/public";
+   };
+
   programs.git = {
     enable = true;
     settings = {
@@ -32,7 +45,6 @@
       identityFile = "~/.ssh/id_ed25519";
     };
   };
-
 
   home.packages = with pkgs; [
     fastfetch
