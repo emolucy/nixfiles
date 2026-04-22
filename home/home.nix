@@ -4,6 +4,7 @@
   home.username = "emmie";
   home.homeDirectory = "/home/emmie";
   home.stateVersion = "25.11";
+
   programs.home-manager.enable = true;
 
   programs.git = {
@@ -15,7 +16,17 @@
     };
   };
 
-  home.packages = with pkgs; [
-    (maven.override { jdk_headless = jdk21.override { enableJavaFX = true; }; })
-  ];
+  programs.neovim = {
+    enable = true;
+    defaultEditor = true;
+    viAlias = true;
+    vimAlias = true;
+  };
+
+  programs.ssh = {
+    enable = true;
+    matchBlocks."github.com" = {
+      identityFile = "~/.ssh/id_ed25519";
+    };
+  };
 }
