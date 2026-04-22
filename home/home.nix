@@ -7,8 +7,6 @@
 
   programs.home-manager.enable = true;
   
-  targets.genericLinux.enable = true;
-
   xdg.userDirs = {
     enable = true;
     createDirectories = true;
@@ -52,6 +50,7 @@
 
   programs.ghostty = {
     enable = true;
+    package = null;
     settings = {
       font-family = "Maple Mono NL NF";
       theme = "Catppuccin Macchiato";
