@@ -47,6 +47,13 @@
       identityFile = "~/.ssh/id_ed25519";
     };
   };
+
+  programs.ghostty = {
+    enable = true;
+    settings = {
+      font-family = "Maple Mono NF";
+    };
+  };
   
   fonts.fontconfig.enable = true;
   xdg.configFile."fontconfig/conf.d/10-hm-fonts.conf".force = true;
@@ -54,5 +61,6 @@
   home.packages = with pkgs; [
     fastfetch
     inter
+    maple-mono.NL-NF
   ];
 }
