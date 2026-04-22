@@ -47,8 +47,24 @@
       identityFile = "~/.ssh/id_ed25519";
     };
   };
+  
+  fonts.fontconfig = {
+    enable = true;
+    antialiasing = true;
+    hinting = "slight";
+    subpixelRendering = "rgb";
+  };
 
-  fonts.fontconfig.enable = true;
+  gtk = {
+    enable = true;
+    gtk3.extraConfig = {
+      gtk-hint-font-metrics = 1;
+      gtk-xft-hinting = 1;
+      gtk-xft-hintstyle = "hintslight";
+      gtk-xft-rgba = "rgb";
+      gtk-xft-antialias = 1;
+    };
+  };
 
   home.packages = with pkgs; [
     fastfetch
