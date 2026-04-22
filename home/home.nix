@@ -51,7 +51,8 @@
   programs.ghostty = {
     enable = true;
     settings = {
-      font-family = "Maple Mono NF";
+      font-family = "Maple Mono NL NF";
+      theme = "catppuccin-macchiato";
     };
   };
   
