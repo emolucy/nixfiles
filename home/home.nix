@@ -52,7 +52,7 @@
     enable = true;
     settings = {
       font-family = "Maple Mono NL NF";
-      theme = "catppuccin-macchiato";
+      theme = "Catppuccin Macchiato";
     };
   };
   
