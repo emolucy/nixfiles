@@ -10,6 +10,7 @@
   xdg.userDirs = {
     enable = true;
     createDirectories = true;
+    setSessionVariables = false;
     desktop = "${config.home.homeDirectory}/store/misc/desktop";
     download = "${config.home.homeDirectory}/dl/net";
     documents = "${config.home.homeDirectory}/store/doc/xdg";
