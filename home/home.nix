@@ -32,4 +32,9 @@
       identityFile = "~/.ssh/id_ed25519";
     };
   };
+
+
+  home.packages = with pkgs; [
+    fastfetch
+  ];
 }
