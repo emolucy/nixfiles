@@ -45,8 +45,26 @@
     };
   };
 
-  programs.starship = {
+  programs.starship = let
+    flavour = "macchiato";
+    catppuccin = builtins.fromTOML (builtins.readFile
+      (pkgs.fetchFromGitHub {
+        owner = "catppuccin";
+        repo = "starship";
+        rev = "HEAD";
+        sha256 = "";
+      } + /palettes/${flavour}.toml));
+  in {
     enable = true;
+    settings = {
+      palette = "catppuccin_${flavour}";
+      character = {
+        success_symbol = "[❯](bold green)";
+        error_symbol = "[❯](bold red)";
+      };
+      directory.style = "bold lavender";
+      git_branch.style = "bold mauve";
+    } // catppuccin;
   };
 
   programs.neovim = {
