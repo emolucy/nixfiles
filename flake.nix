@@ -17,7 +17,7 @@
                 pkgs = nixpkgs.legacyPackages.x86_64-linux;
                 modules = [ 
 		  ./home/home.nix
-		  catppuccin.homeManagerModules.catppuccin
+		  catppuccin.homeModules.catppuccin
 		];
             };
         };
