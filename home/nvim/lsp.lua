@@ -16,6 +16,7 @@ vim.lsp.config("lua_ls", {
 vim.lsp.enable({
 	"nil_ls",
 	"lua_ls",
+	"latexmk",
 })
 
 -- lsp keymaps
