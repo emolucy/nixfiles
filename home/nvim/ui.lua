@@ -8,3 +8,15 @@ require("nvim-tree").setup({
 		git_ignored = false,
 	},
 })
+
+-- file tabs
+require("bufferline").setup({
+	options = {
+		offsets = {
+			{
+				filetype = "NvimTree",
+			},
+		},
+		tab_size = 20,
+	},
+})
