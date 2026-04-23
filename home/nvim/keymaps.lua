@@ -31,3 +31,10 @@ vim.keymap.set("i", "<C-s>", "<C-g>u<Esc>[s1z=`]a<C-g>u", { silent = true })
 
 -- toggle filetree
 vim.keymap.set("n", "<leader>t", vim.cmd.NvimTreeToggle)
+
+-- file tab navigation
+vim.keymap.set("n", "<leader>l", vim.cmd.BufferLineCycleNext)
+vim.keymap.set("n", "<leader>h", vim.cmd.BufferLineCyclePrev)
+vim.keymap.set("n", "<leader>L", vim.cmd.BufferLineMoveNext)
+vim.keymap.set("n", "<leader>H", vim.cmd.BufferLineMovePrev)
+vim.keymap.set("n", "<leader>x", vim.cmd.Bdelete)

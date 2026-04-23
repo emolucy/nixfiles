@@ -11,7 +11,7 @@ require("nvim-tree").setup({
 
 -- file tabs
 require("bufferline").setup({
-	highlights = require("catppuccin.groups.integrations.bufferline").get(),
+	highlights = require("catppuccin.special.bufferline").get_theme(),
 	options = {
 		offsets = {
 			{
