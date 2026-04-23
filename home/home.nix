@@ -75,7 +75,7 @@
 
   programs.rofi = {
     enable = true;
-    package = pkgs.rofi-wayland;
+    package = pkgs.rofi;
   };
 
   catppuccin.rofi.enable = true;
