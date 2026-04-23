@@ -74,7 +74,14 @@
         config = builtins.readFile ./nvim/plugin/cmp.lua;
       }
       luasnip
-      luasnip-latex-snippets-nvim
+      {
+        plugin = luasnip-latex-snippets-nvim;
+        type = "lua";
+        config = ''
+          vim.cmd("packadd luasnip-latex-snippets.nvim")
+          require("luasnip-latex-snippets").setup({ use_treesitter = false })
+        '';
+      }
 
       # utils
       bufdelete-nvim

@@ -3,8 +3,6 @@ require("luasnip").config.setup({
 	store_selection_keys = "<Tab>",
 })
 
-require("luasnip-latex-snippets").setup({ use_treesitter = false })
-
 require("blink.cmp").setup({
 	keymap = {
 		preset = "default",
