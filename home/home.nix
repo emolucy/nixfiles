@@ -62,7 +62,7 @@
       vim-tmux-navigator
       yank
     ];
-    extraConfig = builtins.readFiles ./tmux/tmux.conf;
+    extraConfig = builtins.readFile ./tmux/tmux.conf;
   };
 
   catppuccin.tmux.enable = true;
