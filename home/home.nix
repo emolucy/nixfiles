@@ -55,6 +55,7 @@
     settings = {
       font-family = "Maple Mono NL NF";
       theme = "Catppuccin Macchiato";
+      gtk-titlebar = false;
     };
   };
   
