@@ -75,7 +75,6 @@
       (builtins.readFile ./nvim/treesitter.lua)
       (builtins.readFile ./nvim/lsp.lua)
       (builtins.readFile ./nvim/formatting.lua)
-      (builtins.readFile ./nvim/ui.lua)
       ''
         require("nvim-autopairs").setup({})
       ''
