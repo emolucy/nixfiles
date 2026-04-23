@@ -27,4 +27,4 @@ vim.keymap.set("i", "<C-c>", "<Esc>")
 vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
  
 -- fix last spelling mistake
-vim.keymap.set("i", "<C-s>", "<C-g>u<Esc>[s1z=`]a<C-g>u", { silent = true 
+vim.keymap.set("i", "<C-s>", "<C-g>u<Esc>[s1z=`]a<C-g>u", { silent = true })
