@@ -24,7 +24,7 @@
       stylua
     ];
 
-    extraLuaConfig = builtins.concatStringsSep "\n" [
+    initLua = builtins.concatStringsSep "\n" [
       (builtins.readFile ./nvim/options.lua)
       (builtins.readFile ./nvim/keymaps.lua)
       (builtins.readFile ./nvim/autocmds.lua)
