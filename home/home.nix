@@ -73,10 +73,7 @@
     };
   };
 
-  programs.rofi = {
-    enable = true;
-    package = pkgs.rofi;
-  };
+  programs.rofi.enable = true;
 
   catppuccin.rofi.enable = true;
 
