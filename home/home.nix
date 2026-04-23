@@ -59,7 +59,13 @@
     historyLimit = 50000;
     focusEvents = true;
     plugins = with pkgs.tmuxPlugins; [
-      vim-tmux-navigator
+      {
+        plugin = vim-tmux-navigator;
+        extraCOnfig = ''
+	  # prevent vim-tmux-navigator from rebinding leader C-l
+          set -g @vim_navigator_prefix_mapping_clear_screen ""
+	'';
+      }
       yank
     ];
     extraConfig = builtins.readFile ./tmux/tmux.conf;
