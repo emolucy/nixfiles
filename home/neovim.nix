@@ -55,6 +55,15 @@
         config = builtins.readFile ./nvim/plugin/barbecue.lua;
       }
 
+      # completion
+      {
+        plugin = blink-cmp;
+        type = "lua";
+        config = builtins.readFile ./nvim/plugin/cmp.lua;
+      }
+      luasnip
+      luasnip-latex-snippets-nvim
+
       # utils
       bufdelete-nvim
       vim-tmux-navigator
