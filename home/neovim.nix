@@ -1,5 +1,17 @@
 { pkgs, ... }:
 
+let
+  luasnip-latex-snippets-iurimateus = pkgs.vimUtils.buildVimPlugin {
+    pname = "luasnip-latex-snippets.nvim";
+    version = "unstable-2024-11-22";
+    src = pkgs.fetchFromGitHub {
+      owner = "iurimateus";
+      repo = "luasnip-latex-snippets.nvim";
+      rev = "HEAD";
+      sha256 = pkgs.lib.fakeSha256;
+    };
+  };
+in
 {
   programs.neovim = {
     enable = true;
@@ -33,16 +45,16 @@
       nvim-lspconfig
       conform-nvim
 
-      #{
-      #  plugin = vimtex;
-      #  type = "lua";
-      #  config = ''
-      #        vim.g.vimtex_view_method = "zathura"
-      #        vim.g.vimtex_compiler_method = "latexmk"
-      #        vim.g.vimtex_mappings_enabled = 0
-      #        vim.g.vimtex_imaps_enabled = 0
-      #      '';
-      #}
+      {
+        plugin = vimtex;
+        type = "lua";
+        config = ''
+          vim.g.vimtex_view_method = "zathura"
+          vim.g.vimtex_compiler_method = "latexmk"
+          vim.g.vimtex_mappings_enabled = 0
+          vim.g.vimtex_imaps_enabled = 0
+        '';
+      }
 
       # ui
       nvim-web-devicons
@@ -73,17 +85,17 @@
         type = "lua";
         config = builtins.readFile ./nvim/plugin/blink.lua;
       }
-      #{
-      #  plugin = luasnip;
-      #type = "lua";
-      #  config = ''
-      #        require("luasnip").config.setup({
-      #      enable_autosnippets = true,
-      #      store_selection_keys = "<Tab>",
-      #    })
-      #  '';
-      #}
-      #luasnip-latex-snippets-nvim
+      {
+        plugin = luasnip;
+        type = "lua";
+        config = ''
+              require("luasnip").config.setup({
+            enable_autosnippets = true,
+            store_selection_keys = "<Tab>",
+          })
+        '';
+      }
+      luasnip-latex-snippets-iurimateus
 
       # utils
       bufdelete-nvim
