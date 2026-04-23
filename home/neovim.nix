@@ -71,9 +71,18 @@
       {
         plugin = blink-cmp;
         type = "lua";
-        config = builtins.readFile ./nvim/plugin/cmp.lua;
+        config = builtins.readFile ./nvim/plugin/blink.lua;
       }
-      luasnip
+      {
+        plugin = luasnip;
+        type = "lua";
+        config = ''
+          require("luasnip").config.setup({
+            enable_autosnippets = true,
+            store_selection_keys = "<Tab>",
+          })
+        '';
+      }
       luasnip-latex-snippets-nvim
 
       # utils

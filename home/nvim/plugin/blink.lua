@@ -1,8 +1,3 @@
-require("luasnip").config.setup({
-	enable_autosnippets = true,
-	store_selection_keys = "<Tab>",
-})
-
 require("blink.cmp").setup({
 	keymap = {
 		preset = "default",
