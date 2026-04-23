@@ -106,7 +106,7 @@
     package = null;
     systemd.enable = false;
     settings = {
-      font-family = "Maple Mono NL NF";
+      font-family = "Fira Code NF";
     };
   };
 
@@ -119,5 +119,6 @@
     fastfetch
     inter
     maple-mono.NL-NF
+    nerd-fonts.fira-code
   ];
 }
