@@ -71,8 +71,10 @@
     enable = true;
     presets = [ "bracketed-segments" ];
     settings = {
-      success_symbol = "[](green)";
-      error_symbol = "[](red)";
+      character = {
+        success_symbol = "[](green)";
+        error_symbol = "[](red)";
+      };
     };
   };
 
