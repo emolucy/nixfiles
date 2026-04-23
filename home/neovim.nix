@@ -11,13 +11,14 @@
 
     ];
 
-    catppuccin.nvim = {
-      enable = true;
-      settings = {
-        styles = {
-          comments = [ "italic" ];
-	  conditionals = [ "italic" ];
-	};
+  };
+
+  catppuccin.nvim = {
+    enable = true;
+    settings = {
+      styles = {
+        comments = [ "italic" ];
+	conditionals = [ "italic" ];
       };
     };
   };
