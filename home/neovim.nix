@@ -1,17 +1,5 @@
 { pkgs, ... }:
 
-let
-  luasnip-latex-snippets-iurimateus = pkgs.vimUtils.buildVimPlugin {
-    pname = "luasnip-latex-snippets.nvim";
-    version = "unstable-2024-11-22";
-    src = pkgs.fetchFromGitHub {
-      owner = "iurimateus";
-      repo = "luasnip-latex-snippets.nvim";
-      rev = "a14821dd680dfdd2006b135425cc2a8ab297ebc6";
-      sha256 = "sha256-0Q24sRsmdUCr7V3jod9XmgeUev3BfmiHj5OmrEZiXSI=";
-    };
-  };
-in
 {
   programs.neovim = {
     enable = true;
@@ -95,7 +83,7 @@ in
           })
         '';
       }
-      luasnip-latex-snippets-iurimateus
+      luasnip-latex-snippets-nvim
 
       # utils
       bufdelete-nvim
