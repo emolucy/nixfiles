@@ -29,6 +29,8 @@
 
       nvim-autopairs
 
+      nvim-lspconfig
+
       conform-nvim
     ];
 
@@ -61,7 +63,7 @@
     settings = {
       styles = {
         comments = [ "italic" ];
-	      conditionals = [ "italic" ];
+        conditionals = [ "italic" ];
       };
     };
   };
