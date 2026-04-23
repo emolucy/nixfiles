@@ -42,6 +42,7 @@
 
       # utils
       bufdelete-nvim
+      vim-tmux-navigator
     ];
 
     # lsps and formatters
