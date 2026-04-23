@@ -36,7 +36,7 @@
       nvim-web-devicons
       nvim-tree-lua
       bufferline-nvim
-      #lualine-nvim
+      lualine-nvim
       #barbecue-nvim
       #nvim-navic
 
