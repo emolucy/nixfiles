@@ -61,6 +61,7 @@
     plugins = with pkgs.tmuxPlugins; [
       vim-tmux-navigator
       yank
+      cpu
     ];
     extraConfig = builtins.readFile ./tmux/tmux.conf;
   };
