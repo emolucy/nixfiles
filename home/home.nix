@@ -23,10 +23,6 @@
    };
 
   catppuccin.flavor = "macchiato";
-  catppuccin.kvantum = {
-    enable = true;
-    assertStyle = false;
-  };
 
   programs.git = {
     enable = true;
