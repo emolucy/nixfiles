@@ -1,6 +1,8 @@
 { config, pkgs, ... }:
 
 {
+  imports = [ ./neovim.nix ];
+
   home.username = "emmie";
   home.homeDirectory = "/home/emmie";
   home.stateVersion = "25.11";
@@ -79,15 +81,6 @@
   };
 
   catppuccin.starship.enable = true;
-
-  programs.neovim = {
-    enable = true;
-    defaultEditor = true;
-    viAlias = true;
-    vimAlias = true;
-    withRuby = false;
-    withPython3 = false;
-  };
 
   programs.ssh = {
     enable = true;
