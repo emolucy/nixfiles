@@ -7,8 +7,8 @@ let
     src = pkgs.fetchFromGitHub {
       owner = "iurimateus";
       repo = "luasnip-latex-snippets.nvim";
-      rev = "HEAD";
-      sha256 = pkgs.lib.fakeSha256;
+      rev = "a14821dd680dfdd2006b135425cc2a8ab297ebc6";
+      sha256 = "sha256-0Q24sRsmdUCr7V3jod9XmgeUev3BfmiHj5OmrEZiXSI=";
     };
   };
 in
