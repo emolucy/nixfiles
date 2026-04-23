@@ -78,6 +78,7 @@
         conditionals = [ "italic" ];
       };
       integrations = {
+        bufferline = true;
         nvimtree = true;
         barbecue = {
           dim_dirname = true;
