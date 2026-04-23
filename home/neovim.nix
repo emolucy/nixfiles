@@ -49,12 +49,16 @@
         type = "lua";
         config = builtins.readFile ./nvim/plugin/lualine.lua;
       }
-      #barbecue-nvim
-      #nvim-navic
+      {
+        plugin = barbecue-nvim;
+        type = "lua";
+        config = builtins.readFile ./nvim/plugin/barbecue.lua;
+      }
 
       # utils
       bufdelete-nvim
       vim-tmux-navigator
+      nvim-navic
     ];
 
     # lsps and formatters
