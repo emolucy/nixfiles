@@ -61,7 +61,7 @@
     plugins = with pkgs.tmuxPlugins; [
       {
         plugin = vim-tmux-navigator;
-        extraCOnfig = ''
+        extraConfig = ''
 	  # prevent vim-tmux-navigator from rebinding leader C-l
           set -g @vim_navigator_prefix_mapping_clear_screen ""
 	'';
