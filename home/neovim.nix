@@ -78,7 +78,7 @@
         plugin = luasnip-latex-snippets-nvim;
         type = "lua";
         config = ''
-          vim.cmd("packadd luasnip-latex-snippets.nvim")
+          package.loaded["luasnip-latex-snippets"] = nil
           require("luasnip-latex-snippets").setup({ use_treesitter = false })
         '';
       }
