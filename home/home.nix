@@ -45,26 +45,14 @@
     };
   };
 
-  programs.starship = let
-    flavour = "macchiato";
-    catppuccin = builtins.fromTOML (builtins.readFile
-      (pkgs.fetchFromGitHub {
-        owner = "catppuccin";
-        repo = "starship";
-        rev = "HEAD";
-        sha256 = "sha256-FLHjbClpTqaK4n2qmepCPkb8rocaAo3qeV4Zp1hia0g=";
-      } + /themes/${flavour}.toml));
-  in {
+  catppuccin.starship = {
     enable = true;
-    settings = {
-      palette = "catppuccin_${flavour}";
-      character = {
-        success_symbol = "[❯](bold green)";
-        error_symbol = "[❯](bold red)";
-      };
-      directory.style = "bold lavender";
-      git_branch.style = "bold mauve";
-    } // catppuccin;
+    flavor = "macchiato";
+  };
+
+  programs.starship = {
+    enable = true;
+    presets = [ "bracketed-segments" ];
   };
 
   programs.neovim = {
