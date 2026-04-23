@@ -49,6 +49,24 @@
 
   catppuccin.fish.enable = true;
 
+  programs.tmux = {
+    enable = true;
+    terminal = "tmux-256color";
+    prefix = "C-Space";
+    escapeTime = 0;
+    mouse = true;
+    keyMode = "vi";
+    historyLimit = 50000;
+    focusEvents = true;
+    plugins = with pkgs.tmuxPlugins; [
+      vim-tmux-navigator
+      yank
+    ];
+    extraConfig = builtins.readFiles ./tmux/tmux.conf;
+  };
+
+  catppuccin.tmux.enable = true;
+
   programs.starship = {
     enable = true;
     presets = [ "bracketed-segments" ];
