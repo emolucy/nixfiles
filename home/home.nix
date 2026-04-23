@@ -70,6 +70,10 @@
   programs.starship = {
     enable = true;
     presets = [ "bracketed-segments" ];
+    settings = {
+      success_symbol = "[](green)";
+      error_symbol = "[](red)";
+    };
   };
 
   catppuccin.starship.enable = true;
