@@ -34,9 +34,21 @@
 
       # ui
       nvim-web-devicons
-      nvim-tree-lua
-      bufferline-nvim
-      lualine-nvim
+      {
+        plugin = nvim-tree-lua;
+        type = "lua";
+        config = builtins.readFile ./nvim/plugin/nvim-tree.lua;
+      }
+      {
+        plugin = bufferline-nvim;
+        type = "lua";
+        config = builtins.readFile ./nvim/plugin/bufferline.lua;
+      }
+      {
+        plugin = lualine-nvim;
+        type = "lua";
+        config = builtins.readFile ./nvim/plugin/lualine.lua;
+      }
       #barbecue-nvim
       #nvim-navic
 
