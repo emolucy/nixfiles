@@ -31,6 +31,17 @@
     };
   };
 
+  programs.fish = {
+    enable = true;
+    functions = {
+      hms = ''
+        git add .
+        git commit -m "$argv[1]"
+        home-manager switch --flake .
+      '';
+    };
+  };
+
   programs.neovim = {
     enable = true;
     defaultEditor = true;
