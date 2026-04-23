@@ -22,6 +22,12 @@
     projects = null;
    };
 
+  catppuccin.flavor = "macchiato";
+  catppuccin.kvantum = {
+    enable = true;
+    assertStyle = false;
+  };
+
   programs.git = {
     enable = true;
     settings = {
@@ -45,15 +51,14 @@
     };
   };
 
-  catppuccin.starship = {
-    enable = true;
-    flavor = "macchiato";
-  };
+  catppuccin.fish.enable = true;
 
   programs.starship = {
     enable = true;
     presets = [ "bracketed-segments" ];
   };
+
+  catppuccin.starship.enable = true;
 
   programs.neovim = {
     enable = true;
@@ -78,9 +83,10 @@
     systemd.enable = false;
     settings = {
       font-family = "Maple Mono NL NF";
-      theme = "Catppuccin Macchiato";
     };
   };
+
+  catppuccin.ghostty.enable = true;
   
   fonts.fontconfig.enable = true;
   xdg.configFile."fontconfig/conf.d/10-hm-fonts.conf".force = true;
