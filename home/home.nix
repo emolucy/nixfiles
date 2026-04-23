@@ -73,6 +73,13 @@
     };
   };
 
+  programs.rofi = {
+    enable = true;
+    package = pkgs.rofi-wayland;
+  };
+
+  catppuccin.rofi.enable = true;
+
   programs.ghostty = {
     enable = true;
     package = null;
