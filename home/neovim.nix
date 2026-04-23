@@ -10,6 +10,7 @@
     withPython3 = false;
 
     plugins = with pkgs.vimPlugins; [
+      # language stuff
       (nvim-treesitter.withPlugins (p: [
         p.bash
         p.c
@@ -28,10 +29,19 @@
       ]))
 
       nvim-autopairs
-
       nvim-lspconfig
-
       conform-nvim
+
+      # ui
+      nvim-web-devicons
+      nvim-tree-lua
+      bufferline-nvim
+      #lualine-nvim
+      #barbecue-nvim
+      #nvim-navic
+
+      # utils
+      bufdelete-nvim
     ];
 
     # lsps and formatters
@@ -52,6 +62,7 @@
       (builtins.readFile ./nvim/treesitter.lua)
       (builtins.readFile ./nvim/lsp.lua)
       (builtins.readFile ./nvim/formatting.lua)
+      (builtins.readFile ./nvim/ui.lua)
       ''
         require("nvim-autopairs").setup({})
       ''
@@ -64,6 +75,17 @@
       styles = {
         comments = [ "italic" ];
         conditionals = [ "italic" ];
+      };
+      integrations = {
+        nvimtree = true;
+        barbecue = {
+          dim_dirname = true;
+          bold_basename = true;
+          dim_context = false;
+        };
+        native_lsp = {
+          enabled = true;
+        };
       };
     };
   };
