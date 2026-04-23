@@ -26,6 +26,8 @@
         p.vim
         p.vimdoc
       ]))
+
+      nvim-autopairs
     ];
 
     # lsps and formatters
@@ -44,6 +46,9 @@
       (builtins.readFile ./nvim/keymaps.lua)
       (builtins.readFile ./nvim/autocmds.lua)
       (builtins.readFile ./nvim/treesitter.lua)
+      ''
+        require("nvim-autopairs").setup({})
+      ''
     ];
   };
 
