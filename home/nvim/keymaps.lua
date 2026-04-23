@@ -41,3 +41,6 @@ vim.keymap.set("n", "<leader>x", vim.cmd.Bdelete)
 
 -- luasnip
 vim.keymap.set("x", "<Tab>", "<Plug>luasnip-expand-or-jump")
+
+-- compile vimtex
+vim.keymap.set("n", "<leader>c", vim.cmd.VimtexCompile)
