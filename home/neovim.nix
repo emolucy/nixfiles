@@ -100,6 +100,9 @@
       # lua
       lua-language-server
       stylua
+
+      # latex
+      texlab
     ];
 
     initLua = builtins.concatStringsSep "\n" [
