@@ -1,14 +1,17 @@
 { config, pkgs, ... }:
 
 {
-  imports = [ ./neovim.nix ];
+  imports = [
+    ./neovim.nix
+    ./latex.nix
+  ];
 
   home.username = "emmie";
   home.homeDirectory = "/home/emmie";
   home.stateVersion = "25.11";
 
   programs.home-manager.enable = true;
-  
+
   xdg.userDirs = {
     enable = true;
     createDirectories = true;
@@ -22,7 +25,7 @@
     templates = "${config.home.homeDirectory}/store/misc/template";
     publicShare = "${config.home.homeDirectory}/dl/public";
     projects = null;
-   };
+  };
 
   catppuccin.flavor = "macchiato";
 
@@ -104,7 +107,7 @@
   };
 
   catppuccin.ghostty.enable = true;
-  
+
   fonts.fontconfig.enable = true;
   xdg.configFile."fontconfig/conf.d/10-hm-fonts.conf".force = true;
 
