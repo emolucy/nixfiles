@@ -14,7 +14,7 @@ vim.lsp.config("lua_ls", {
 
 -- java
 vim.api.nvim_create_autocmd("FileType", {
-	group = "augroup",
+	group = "Autocmds",
 	pattern = "java",
 	callback = function()
 		local jdtls = require("jdtls")
@@ -38,7 +38,7 @@ vim.lsp.enable({
 
 -- lsp keymaps
 vim.api.nvim_create_autocmd("LspAttach", {
-	group = "augroup",
+	group = "Autocmds",
 	callback = function(args)
 		local opts = { buffer = args.buf }
 		vim.keymap.set("n", "<leader>vd", vim.diagnostic.open_float, opts)
