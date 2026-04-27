@@ -29,6 +29,7 @@
           p.vimdoc
           p.markdown
           p.markdown_inline
+          p.java
         ]);
         type = "lua";
         config = builtins.readFile ./nvim/plugin/treesitter.lua;
