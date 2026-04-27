@@ -11,22 +11,26 @@
 
     plugins = with pkgs.vimPlugins; [
       # treesitter
-      (nvim-treesitter.withPlugins (p: [
-        p.bash
-        p.c
-        p.cpp
-        p.css
-        p.html
-        p.javascript
-        p.json
-        p.lua
-        p.nix
-        p.rust
-        p.tsx
-        p.typescript
-        p.vim
-        p.vimdoc
-      ]))
+      {
+        plugin = nvim-treesitter.withPlugins (p: [
+          p.bash
+          p.c
+          p.cpp
+          p.css
+          p.html
+          p.javascript
+          p.json
+          p.lua
+          p.nix
+          p.rust
+          p.tsx
+          p.typescript
+          p.vim
+          p.vimdoc
+        ]);
+        type = "lua";
+        config = builtins.readFile ./nvim/plugin/treesitter.lua;
+      }
 
       # lsp
       nvim-autopairs
