@@ -27,6 +27,8 @@
           p.typescript
           p.vim
           p.vimdoc
+          p.markdown
+          p.markdown_inline
         ]);
         type = "lua";
         config = builtins.readFile ./nvim/plugin/treesitter.lua;
@@ -70,11 +72,7 @@
         type = "lua";
         config = builtins.readFile ./nvim/plugin/barbecue.lua;
       }
-      {
-        plugin = diffview-nvim;
-        type = "lua";
-        config = builtins.readFile ./nvim/plugin/diffview.lua;
-      }
+      markview-nvim
 
       # completion
       {
@@ -136,7 +134,7 @@
       integrations = {
         bufferline = true;
         nvimtree = true;
-        diffview = true;
+        markview = true;
         blink_cmp = {
           style = "bordered";
         };

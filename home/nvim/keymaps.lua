@@ -17,8 +17,9 @@ vim.keymap.set("n", "<C-u>", "<C-u>zz")
 vim.keymap.set("n", "n", "nzzzv")
 vim.keymap.set("n", "N", "Nzzzv")
 
--- copy to system clipboard
+-- copy/paste to system clipboard
 vim.keymap.set({ "n", "v" }, "<leader>y", '"+y')
+vim.keymap.set({ "n", "v" }, "<leader>p", '"+p')
 
 -- ensure ctrl c and esc operate identically
 vim.keymap.set("i", "<C-c>", "<Esc>")
@@ -45,15 +46,5 @@ vim.keymap.set("x", "<Tab>", "<Plug>luasnip-expand-or-jump")
 -- compile vimtex
 vim.keymap.set("n", "<leader>c", vim.cmd.VimtexCompile)
 
--- toggle diffview
-vim.keymap.set("n", "<leader>d", function()
-	local lib = require("diffview.lib")
-	local view = lib.get_current_view()
-	if view then
-		-- close if current page is diffview
-		vim.cmd.DiffviewClose()
-	else
-		-- open new diffview if none exist
-		vim.cmd.DiffviewOpen()
-	end
-end)
+-- markview toggle
+vim.keymap.set("n", "<leader>m", vim.cmd.Markview)
