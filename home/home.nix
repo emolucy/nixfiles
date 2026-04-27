@@ -112,6 +112,11 @@
   fonts.fontconfig.enable = true;
   xdg.configFile."fontconfig/conf.d/10-hm-fonts.conf".force = true;
 
+  programs.direnv = {
+    enable = true;
+    nix-direnv.enable = true;
+  };
+
   home.packages = with pkgs; [
     fastfetch
     inter

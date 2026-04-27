@@ -17,6 +17,7 @@ vim.lsp.enable({
 	"nil_ls",
 	"lua_ls",
 	"latexmk",
+	"jdtls",
 })
 
 -- lsp keymaps
