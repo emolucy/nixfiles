@@ -77,7 +77,7 @@
         plugin = luasnip;
         type = "lua";
         config = ''
-              require("luasnip").config.setup({
+          require("luasnip").config.setup({
             enable_autosnippets = true,
             store_selection_keys = "<Tab>",
           })
