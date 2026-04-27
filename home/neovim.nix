@@ -51,6 +51,8 @@
         '';
       }
 
+      nvim-jdtls
+
       # ui
       nvim-web-devicons
       {
@@ -115,6 +117,10 @@
 
       # latex
       texlab
+
+      # java
+      jdt-language-server
+      google-java-format
     ];
 
     initLua = builtins.concatStringsSep "\n" [

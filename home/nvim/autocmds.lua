@@ -2,6 +2,7 @@ local augroup = vim.api.nvim_create_augroup("Autocmds", { clear = true })
 
 -- enable spellcheck in tex files
 vim.api.nvim_create_autocmd("FileType", {
+	group = augroup,
 	pattern = "tex",
 	callback = function()
 		vim.opt_local.spell = true
