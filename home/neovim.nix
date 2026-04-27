@@ -137,6 +137,9 @@
         bufferline = true;
         nvimtree = true;
         diffview = true;
+        blink_cmp = {
+          style = "bordered";
+        };
         barbecue = {
           dim_dirname = true;
           bold_basename = true;
