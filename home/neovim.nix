@@ -136,6 +136,7 @@
       integrations = {
         bufferline = true;
         nvimtree = true;
+        diffview = true;
         barbecue = {
           dim_dirname = true;
           bold_basename = true;
