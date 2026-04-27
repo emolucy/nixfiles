@@ -113,7 +113,6 @@
       (builtins.readFile ./nvim/options.lua)
       (builtins.readFile ./nvim/keymaps.lua)
       (builtins.readFile ./nvim/autocmds.lua)
-      (builtins.readFile ./nvim/treesitter.lua)
       (builtins.readFile ./nvim/lsp.lua)
       (builtins.readFile ./nvim/formatting.lua)
       ''
