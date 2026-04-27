@@ -72,7 +72,11 @@
         type = "lua";
         config = builtins.readFile ./nvim/plugin/barbecue.lua;
       }
-      markview-nvim
+      {
+        plugin = markview-nvim;
+        type = "lua";
+        config = builtins.readFile ./nvim/plugin/markview.lua;
+      }
 
       # completion
       {

@@ -47,4 +47,4 @@ vim.keymap.set("x", "<Tab>", "<Plug>luasnip-expand-or-jump")
 vim.keymap.set("n", "<leader>c", vim.cmd.VimtexCompile)
 
 -- markview toggle
-vim.keymap.set("n", "<leader>m", vim.cmd.Markview)
+vim.keymap.set("n", "<leader>m", "<cmd>Markview splitToggle<cr>")
