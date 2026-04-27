@@ -70,6 +70,11 @@
         type = "lua";
         config = builtins.readFile ./nvim/plugin/barbecue.lua;
       }
+      {
+        plugin = diffview-nvim;
+        type = "lua";
+        config = builtins.readFile ./nvim/plugin/diffview.lua;
+      }
 
       # completion
       {

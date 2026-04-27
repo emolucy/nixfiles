@@ -44,3 +44,20 @@ vim.keymap.set("x", "<Tab>", "<Plug>luasnip-expand-or-jump")
 
 -- compile vimtex
 vim.keymap.set("n", "<leader>c", vim.cmd.VimtexCompile)
+
+-- toggle diffview
+vim.keymap.set("n", "<leader>dt", function()
+	local lib = require("diffview.lib")
+	local view = lib.get_current_view()
+	if view then
+		-- close if current page is diffview
+		vim.cmd.DiffviewClose()
+	else
+		-- open new diffview if none exist
+		vim.cmd.DiffviewOpen()
+	end
+end)
+
+-- open/close diffview
+vim.keymap.set("n", "<leader>do", vim.cmd.DiffviewOpen)
+vim.keymap.set("n", "<leader>dc", vim.cmd.DiffviewClose)
