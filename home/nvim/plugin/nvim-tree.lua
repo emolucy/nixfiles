@@ -4,6 +4,6 @@ require("nvim-tree").setup({
 		width = 30,
 	},
 	filters = {
-		custom = { "^.git$" },
+		custom = { "^.git$", "^.settings$", "^.classpath$", "^.project$" },
 	},
 })
