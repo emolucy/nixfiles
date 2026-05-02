@@ -2,8 +2,10 @@ local ls = require("luasnip")
 local s = ls.snippet
 local t = ls.text_node
 local i = ls.insert_node
-local utils = require("luasnip-latex-snippets.util.utils")
-local not_math = utils.not_math()
+
+local function not_math()
+	return vim.fn["vimtex#syntax#in_mathzone"]() == 0
+end
 
 local function remove_by_trigger(filetype, triggers)
 	local existing = ls.get_snippets(filetype)
