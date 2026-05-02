@@ -48,6 +48,7 @@
           vim.g.vimtex_compiler_method = "tectonic"
           vim.g.vimtex_mappings_enabled = 0
           vim.g.vimtex_imaps_enabled = 0
+          vim.g.vimtex_view_forward_search_on_start = 0
         '';
       }
 
@@ -97,7 +98,11 @@
           })
         '';
       }
-      luasnip-latex-snippets-nvim
+      {
+        plugin = luasnip-latex-snippets-nvim;
+        type = "lua";
+        config = builtins.readFile ./nvim/plugin/luasnip-latex.lua;
+      }
 
       # utils
       bufdelete-nvim
