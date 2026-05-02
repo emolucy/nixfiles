@@ -3,7 +3,6 @@
 {
   imports = [
     ./neovim.nix
-    ./latex.nix
   ];
 
   home.username = "emmie";
@@ -122,5 +121,8 @@
     inter
     maple-mono.NL-NF
     nerd-fonts.fira-mono
+
+    tectonic
+    zathura
   ];
 }

@@ -45,7 +45,7 @@
         type = "lua";
         config = ''
           vim.g.vimtex_view_method = "zathura"
-          vim.g.vimtex_compiler_method = "latexmk"
+          vim.g.vimtex_compiler_method = "tectonic"
           vim.g.vimtex_mappings_enabled = 0
           vim.g.vimtex_imaps_enabled = 0
         '';
