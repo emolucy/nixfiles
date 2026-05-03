@@ -96,12 +96,9 @@
             enable_autosnippets = true,
             store_selection_keys = "<Tab>",
           })
-        '';
-      }
-      {
-        plugin = luasnip-latex-snippets-nvim;
-        type = "lua";
-        config = builtins.readFile ./nvim/plugin/luasnip-latex.lua;
+        ''
+        + "\n"
+        + builtins.readFile ./nvim/snippets/tex.lua;
       }
 
       # utils
