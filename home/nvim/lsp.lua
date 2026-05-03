@@ -33,7 +33,7 @@ vim.api.nvim_create_autocmd("FileType", {
 vim.lsp.enable({
 	"nil_ls",
 	"lua_ls",
-	"latexmk",
+	"texlab",
 })
 
 -- lsp keymaps
