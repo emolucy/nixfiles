@@ -5,9 +5,14 @@
     ./neovim.nix
   ];
 
-  home.username = "emmie";
-  home.homeDirectory = "/home/emmie";
-  home.stateVersion = "25.11";
+  home = {
+    username = "emmie";
+    homeDirectory = "/home/emmie";
+    stateVersion = "25.11";
+    sessionVariables = {
+      SUDO_EDITOR = "nvim";
+    };
+  };
 
   programs.home-manager.enable = true;
 
